@@ -1,0 +1,25 @@
+//Mükemmel sayi testi.(Mükemmel sayi kendisi hariç pozitif bölenlerinin toplamı kendisini veren sayidir.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int number;
+	cout << "Type a number: ";
+	cin >> number;
+	int sum = 0;
+	for (int i = 1; i < number; i++)
+	{
+		if (number % i == 0)
+			sum = sum + i; //sum +=i
+	}
+	if (sum == number)
+	{
+		cout << "The number is perfect number";
+		
+	}
+	else  //(sum != number)
+	{
+		cout << "The number is not a perfect number.";
+	}
+	return 0;
+}
