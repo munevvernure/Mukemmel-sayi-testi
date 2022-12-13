@@ -23,3 +23,27 @@ int main()
 	}
 	return 0;
 }
+
+
+//Write a program in C++ to find the perfect numbers between 1 and 500.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int sum = 0;
+	cout << "Perfect numbers b/w 1 - 500: ";
+	for (int number = 2; number < 500; number++) {
+		for (int i = 1; i < number; i++) {
+			if (number % i == 0)
+				sum += i;
+		}
+		//cout << sum << "   " << number << endl;
+		if (sum == number)
+			cout << number << endl;
+		sum = 0;
+	}
+	
+
+	return 0;
+
+	}
